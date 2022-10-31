@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Log in</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link href="./stylesheets/login.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat Brush">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
+  </head>
+
+  <body>
+    <div class="center-title">
+      <h2>Login</h2>
+    </div>
+    
+    <div class="center-content">
+      <form action="/users/login" method="post">
+        <input
+          type="text"
+          name="username"
+          value=""
+          placeholder="Enter your Username "
+        />
+        <br>
+        <input
+          type="password"
+          name="password"
+          value=""
+          placeholder="Enter your Password "
+        />
+        <br>
+        <input type="submit" name="" value="Login" />
+      </form>
+      <div>
+        if you don't have account, you can <a href="/register">Register</a>!
+      </div>
+    </div>
+  </body>
+</html>
