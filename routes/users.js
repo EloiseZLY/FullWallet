@@ -2,14 +2,13 @@ var express = require("express");
 var router = express.Router();
 var model = require("../model");
 
-//注册接口：
 router.post("/register", function (req, res, next) {
   var data = {
     username: req.body.username,
     password: req.body.password,
     password2: req.body.password2,
   };
-  //数据验证：
+
   model.connect(function (db) {
     db.collection("users").insertOne(data, function (err, ret) {
       if (err) {
@@ -23,7 +22,6 @@ router.post("/register", function (req, res, next) {
   // res.send(data);
 });
 
-//login接口
 router.post("/login", function (req, res, next) {
   var query = {
     username: req.body.username,
@@ -56,17 +54,65 @@ router.get("/budget", function (req, res, next) {
   var query = {
     username: username,
   };
-  console.log("Username", username);
   model.connect(function (db) {
     db.collection("users").findOne(query, function (err, result) {
       if (err) {
         // return 0 dollar in case front end shows nothing
         res.send("{}");
       } else {
-        res.send(
-          '{"budget":' + result.budget + ',"goal":"' + result.goal + '"}'
-        );
-        console.log("User document", result);
+        payload = {};
+        payload["name"] = result.username;
+        payload["budget"] = result.budget;
+        payload["goal"] = result.goal;
+        res.send(JSON.stringify(payload));
+      }
+    });
+  });
+});
+
+// get transactions
+router.get("/transactions", function (req, res, next) {
+  var username = req.session.username;
+  var query = {
+    username: username,
+  };
+
+  model.connect(function (db) {
+    db.collection("users").findOne(query, function (err, result) {
+      if (err) {
+        res.send("{}");
+      } else {
+        payload = {};
+        db.collection("transactions")
+          .find(query)
+          .toArray(function (err, docs) {
+            if (err) {
+              res.send("{}");
+            } else {
+              console.log(docs);
+              if (docs.length > 0) {
+                categories = {};
+                dates = {};
+                total = 0;
+                for (var i = 0; i < docs.length; i++) {
+                  if (!(docs[i].category in categories)) {
+                    categories[docs[i].category] = 0;
+                  }
+                  categories[docs[i].category] += docs[i].amount;
+                  if (!(docs[i].date in dates)) {
+                    dates[docs[i].date] = 0;
+                  }
+                  dates[docs[i].date] += docs[i].amount;
+                  total = total + docs[i].amount;
+                }
+                payload["categories"] = categories;
+                payload["dates"] = dates;
+                payload["total"] = total;
+                console.log(payload);
+                res.send(JSON.stringify(payload));
+              }
+            }
+          });
       }
     });
   });

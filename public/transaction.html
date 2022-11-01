@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Full Wallet</title>
+
+    <!-- Montserrat Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/stylesheets/dashboard.css" />
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">Full Wallet</span>
+        </div>
+
+        <div style="position: absolute; right: 50px; top: 30px">
+          Alice, welcome!
+        </div>
+      </header>
+      <!-- End Header -->
+
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+          <div class="sidebar-brand">
+            <span class="material-icons-outlined">money</span> Alice's Wallet
+          </div>
+          <span class="material-icons-outlined" onclick="closeSidebar()"
+            >close</span
+          >
+        </div>
+
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="/"><span class="material-icons-outlined">dashboard</span> Dashboard</a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="/edit"><span class="material-icons-outlined">edit_note</span> Edit profile</a>
+          </li>
+          <li class="sidebar-list-item">
+            <a href="/transaction"><span class="material-icons-outlined"">checklist_rtl</span>Transactions</a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="/logout"><span class="material-icons-outlined">logout</span> Log out</a>
+          </li>
+        </ul>
+      </aside>
+      <!-- End Sidebar -->
+      <!-- Main edit content -->
+      <div id = "transaction">
+        <h1>Your transaction this month: </h1> 
+
+        <TABLE BORDER=1 WIDTH=300>
+            <tr>              
+              <th>Expense Discription</th>
+              <th>Category</th>
+              <th>Date</th>
+              <th>Amount</th>
+              <th>Note</th>
+            </tr>
+            <tr>
+              <td>Rent(Semptember)</td>
+              <td>Rent</td>
+              <td>08/29/2022</td>
+              <td>$1100</td>
+              <td>NA</td>
+            </tr>
+            <tr>
+              <td>Electricity</td>
+              <td>Utility</td>
+              <td>08/30/2022</td>
+              <td>$50</td>
+              <td>Turn off light more</td>
+            </tr>
+            <tr>
+              <td>Laptop</td>
+              <td>Study/Work</td>
+              <td>09/01/2022</td>
+              <td>$2000</td>
+              <td>necessary spending</td>
+            </tr>
+            <tr>
+              <td>Clipper card</td>
+              <td>transportation</td>
+              <td>09/02/2022</td>
+              <td>$180</td>
+              <td>20% off, nice!</td>
+            </tr>
+            <tr>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+            <tr>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+            <tr>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+                <td>...</td>
+            </tr>
+          </table>
+        </div>
+           <!-- Main edit transaction -->
+        
+        <div class = "edit-transaction">
+            <h2>Please add your transaction: </h2>
+        <li><label class="edit-expense">Expense Description:</label>
+            <input type="text" id="expense-text" required
+        minlength="4" maxlength="120" size="30"></li>  
+
+        <li><label class="edit-category">Category:</label>
+            <input type="text" id="category-text" required
+        minlength="4" maxlength="120" size="30"></li>  
+
+        <li><label class="edit-date">Date:</label>
+        <input type="date" id="date-text" required
+         minlength="4" maxlength="120" size="30"></li>  
+
+        <li><label class="edit-amount">Amount:</label>
+            <input type="number" id="amount-text" required
+        minlength="4" maxlength="120" size="30"></li>  
+
+        <li><label class="edit-note">Note:</label>
+            <input type="text" id="note-text" required
+        minlength="4" maxlength="120" size="30"></li>  
+        <input class = "submitBton" type="button" value="Submit" />
+    </div>
+
+      
+</html>

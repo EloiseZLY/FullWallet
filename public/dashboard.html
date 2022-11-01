@@ -28,7 +28,7 @@
           <span class="material-icons-outlined">Full Wallet</span>
         </div>
 
-        <div style="position: absolute; right: 50px; top: 30px">
+        <div id="welcome" style="position: absolute; right: 50px; top: 30px">
           Alice, welcome!
         </div>
       </header>
@@ -38,7 +38,7 @@
       <aside id="sidebar">
         <div class="sidebar-title">
           <div class="sidebar-brand">
-            <span class="material-icons-outlined">money</span> Alice's Wallet
+            <span class="material-icons-outlined">money</span> <span id="wallet">Alice's Wallet</span>
           </div>
           <span class="material-icons-outlined" onclick="closeSidebar()"
             >close</span
@@ -47,19 +47,17 @@
 
         <ul class="sidebar-list">
           <li class="sidebar-list-item">
-            <span class="material-icons-outlined">dashboard</span> Dashboard
+            <a href="/"><span class="material-icons-outlined">dashboard</span> Dashboard</a>
           </li>
           <li class="sidebar-list-item">
-            <span class="material-icons-outlined">edit_note</span> Edit profile
+            <a href="/edit"><span class="material-icons-outlined">edit_note</span> Edit profile</a>
           </li>
           <li class="sidebar-list-item">
-            <span class="material-icons-outlined">checklist_rtl</span>
-            Transactions
+            <a href="/transaction"><span class="material-icons-outlined"">checklist_rtl</span>Transactions</a>
           </li>
 
           <li class="sidebar-list-item">
-            <span class="material-icons-outlined">logout</span>
-            Log out
+            <a href="/logout"><span class="material-icons-outlined">logout</span> Log out</a>
           </li>
         </ul>
       </aside>
@@ -68,7 +66,7 @@
       <!-- Main -->
       <main class="main-container">
         <div class="main-title">
-          <p class="font-weight-bold">Alice Zheng's Spending</p>
+          <p class="font-weight-bold">Your Spending</p>
         </div>
 
         <div class="main-cards">
@@ -97,7 +95,7 @@
                 >notification_important</span
               >
             </div>
-            <span class="text-primary font-weight-bold">$500 left</span>
+            <span id="remains" class="text-primary font-weight-bold"></span>
           </div>
         </div>
         <!--circle chart-->

@@ -4,38 +4,48 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #00b7ff;
 }
 
-.form-container{
-  font-family: 'Mukta', sans-serif;
+.form-container {
+  font-family: "Mukta", sans-serif;
   padding: 0 20px 20px 0;
 }
-.form-container .form-horizontal{
-  background: repeating-linear-gradient(45deg,#fff,#fff 10px,#f9f9f9 10px,#f9f9f9 20px);
+.form-container .form-horizontal {
+  background: repeating-linear-gradient(
+    45deg,
+    #fff,
+    #fff 10px,
+    #f9f9f9 10px,
+    #f9f9f9 20px
+  );
   padding: 70px 40px 40px;
   border-radius: 0;
-  border: 2px solid rgba(0,0,0,0.1);
-  box-shadow: 20px 20px 0 rgba(0,0,0,0.1);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 20px 20px 0 rgba(0, 0, 0, 0.1);
   position: relative;
 }
-.form-horizontal .title{
+.form-horizontal .title {
   color: #222;
   font-size: 80px;
   font-weight: 700;
   margin: 0 0 8px 0;
 }
-.form-horizontal .description{
+.form-horizontal .description {
   color: #222;
   font-size: 18px;
   font-weight: 600;
   margin: 0 0 30px 0;
   display: block;
 }
-.form-horizontal .form-group{ margin: 0 0 30px; }
-.form-horizontal .form-group:nth-child(3){ margin-bottom: 20px; }
-.form-horizontal .form-control{
-  color: #446DCA;
+.form-horizontal .form-group {
+  margin: 0 0 30px;
+}
+.form-horizontal .form-group:nth-child(3) {
+  margin-bottom: 20px;
+}
+.form-horizontal .form-control {
+  color: #446dca;
   font-size: 16px;
   letter-spacing: 1px;
   height: 40px;
@@ -47,17 +57,17 @@ a {
   border-radius: 0;
   transition: all 0.3s ease 0s;
 }
-.form-horizontal .form-control:focus{
+.form-horizontal .form-control:focus {
   box-shadow: none;
-  border-color: #446DCA;
+  border-color: #446dca;
 }
-.form-horizontal .form-control::placeholder{
+.form-horizontal .form-control::placeholder {
   color: #222;
   font-size: 15px;
 }
-.form-horizontal .btn{
+.form-horizontal .btn {
   color: #fff;
-  background-color: #446DCA;
+  background-color: #446dca;
   font-size: 18px;
   font-weight: 600;
   text-align: left;
@@ -73,14 +83,14 @@ a {
   transition: all 0.3s ease 0s;
 }
 .form-horizontal .btn:hover,
-.form-horizontal .btn:focus{
+.form-horizontal .btn:focus {
   color: #fff;
   background-color: #222;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   outline: none;
 }
-.form-horizontal .btn:after{
-  content: '';
+.form-horizontal .btn:after {
+  content: "";
   height: 70%;
   width: 110%;
   border-top: 5px solid #fff;
@@ -91,11 +101,11 @@ a {
   top: -65px;
   transition: all 0.5s ease 0s;
 }
-.form-horizontal .btn:hover:after{
+.form-horizontal .btn:hover:after {
   right: -70px;
   top: -30px;
 }
-.form-horizontal .signup{
+.form-horizontal .signup {
   color: #222;
   font-size: 18px;
   font-weight: 600;
@@ -103,41 +113,51 @@ a {
   vertical-align: text-top;
   display: inline-block;
 }
-.form-horizontal .signup a{
-  color: #446DCA;
+.form-horizontal .signup a {
+  color: #446dca;
   text-decoration: underline;
   margin: 0 0 0 25px;
 }
-.form-horizontal .signup a:hover{
+.form-horizontal .signup a:hover {
   color: #000;
   transition: all 0.3s ease 0s;
 }
-.form-horizontal .forgot{
-  color: #446DCA;
+.form-horizontal .forgot {
+  color: #446dca;
   text-decoration: underline;
   display: block;
 }
-.form-horizontal .forgot a{
-  color: #446DCA;
+.form-horizontal .forgot a {
+  color: #446dca;
   transition: all 0.3s ease 0s;
 }
-.form-horizontal .forgot a:hover{ color: #222; }
-@media only screen and (max-width:479px){
-  .form-container .form-horizontal{
-      padding-left: 20px;
-      padding-right: 20px;
+.form-horizontal .forgot a:hover {
+  color: #222;
+}
+@media only screen and (max-width: 479px) {
+  .form-container .form-horizontal {
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  .form-horizontal .title{ font-size: 55px; }
-  .form-horizontal .description{ font-size: 16px; }
-  .form-horizontal .form-control::placeholder{ font-size: 14px; }
-  .form-horizontal .btn{
-      display: block;
-      margin: 0 auto 20px;
+  .form-horizontal .title {
+    font-size: 55px;
   }
-  .form-horizontal .signup{
-      text-align: center;
-      margin: 0 auto 20px;
-      display: block;
+  .form-horizontal .description {
+    font-size: 16px;
   }
-  .form-horizontal .forgot{ text-align: center; }
+  .form-horizontal .form-control::placeholder {
+    font-size: 14px;
+  }
+  .form-horizontal .btn {
+    display: block;
+    margin: 0 auto 20px;
+  }
+  .form-horizontal .signup {
+    text-align: center;
+    margin: 0 auto 20px;
+    display: block;
+  }
+  .form-horizontal .forgot {
+    text-align: center;
+  }
 }
