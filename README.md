@@ -17,10 +17,8 @@ Built with node.js, Express.js and HTML5 and some other libraries to add more fu
 
 
 ## Some screenshots
-1. Page for registering
-![](./frontend//images/homepage.png)
-2. Page for dashboard
-![](./frontend/images/dashboard.jpg)
+Page for dashboard
+<img width="1496" alt="Screen Shot 2022-10-31 at 4 22 21 PM" src="https://user-images.githubusercontent.com/99467950/199327101-5862872c-0b96-45f5-a05a-120cd1bee4fb.png">
 
 # Other resource
 1. Design Document
