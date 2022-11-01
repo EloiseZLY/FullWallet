@@ -17,8 +17,12 @@ Built with node.js, Express.js and HTML5 and some other libraries to add more fu
 
 
 ## Some screenshots
+Page for login
+<img width="1492" alt="Screen Shot 2022-11-01 at 1 01 01 PM" src="https://user-images.githubusercontent.com/99467950/199328127-41083b1e-bfdb-4086-932a-934ed9ddc1a7.png">
+
 Page for dashboard
-<img width="1496" alt="Screen Shot 2022-10-31 at 4 22 21 PM" src="https://user-images.githubusercontent.com/99467950/199327101-5862872c-0b96-45f5-a05a-120cd1bee4fb.png">
+<img width="1487" alt="Screen Shot 2022-11-01 at 1 01 13 PM" src="https://user-images.githubusercontent.com/99467950/199327796-528de288-cbc5-4e68-a8f5-ee1c56a8c575.png">
+
 
 # Other resource
 1. Design Document
